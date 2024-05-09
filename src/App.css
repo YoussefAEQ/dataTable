@@ -1,11 +1,15 @@
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #549433;
   color: white;
   padding: 10px;
   font-size: 14px;
-  border: 2px blue solid;
+  border: 2px #549433 solid;
   cursor: pointer;
-  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  text-align: left;
+  border-radius: 3px;
+
   
 }
 
