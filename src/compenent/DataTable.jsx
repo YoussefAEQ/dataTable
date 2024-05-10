@@ -1,6 +1,7 @@
 import { MantineReactTable, useMantineReactTable } from 'mantine-react-table';
 import { MantineProvider } from '@mantine/core';
 import { IconEdit, IconSend, IconTrash } from '@tabler/icons-react';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 import { Box, Button ,ActionIcon} from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
@@ -68,11 +69,14 @@ const DataTable = ({data,columns}) => {
         enableFullScreenToggle:false,
         positionGlobalFilter:"left",
         enableRowActions: true,
+        
 
         
         initialState: {
-          columnPinning: {  right: ['action'] },
+          columnPinning: { right: ['mrt-row-actions'] },
           showGlobalFilter: true,
+          density: 'xs' 
+
           
         },
         mantinePaperProps: {
@@ -88,7 +92,11 @@ const DataTable = ({data,columns}) => {
       textAlign: 'left'}},
       renderRowActions: ({ row }) => (
         <Box sx={{ display: 'flex', flexWrap: 'nowrap', gap: '8px' }}>
-          
+          <ActionIcon 
+            color="#00215E">
+          <VisibilityIcon />
+
+        </ActionIcon>
           <ActionIcon
             color="orange"
             onClick={() => {
